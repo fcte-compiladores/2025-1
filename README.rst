@@ -158,8 +158,8 @@ Bibliografia principal
 Material suplementar
 --------------------
 
-**Curso de Python:** https://scrimba.com/learn/python
-**Curso de Python no Youtube (pt-BR):** https://www.youtube.com/watch?v=S9uPNppGsGo&list=PLvE-ZAFRgX8hnECDn1v9HNTI71veL3oW0
+* **Curso de Python:** https://scrimba.com/learn/python
+* **Curso de Python no Youtube (pt-BR):** https://www.youtube.com/watch?v=S9uPNppGsGo&list=PLvE-ZAFRgX8hnECDn1v9HNTI71veL3oW0
 
 
 Cronograma de atividades
