@@ -151,8 +151,8 @@ instalação do Docker e Docker Compose na sua máquina.
 Bibliografia principal
 ----------------------
 
-**Dragon Book:** Crafting Interpreters, Robert Nystrom, 2015-2021. (https://craftinginterpreters.com/)
-**SICP:** Structure and Interpretation of Computer Programs, Gerald Jay Sussman and Hal Abelson, MIT Press. (https://web.mit.edu/alexmv/6.037/sicp.pdf)
+* Crafting Interpreters, Robert Nystrom, 2015-2021. (https://craftinginterpreters.com/)
+* **(SICP)** Structure and Interpretation of Computer Programs, Gerald Jay Sussman and Hal Abelson, MIT Press. (https://web.mit.edu/alexmv/6.037/sicp.pdf)
 
 
 Material suplementar
