@@ -1,0 +1,36 @@
+?start   : expr
+
+?expr    : cmp
+
+?cmp     : math ">" math   -> gt
+         | math "<" math   -> lt
+         | math ">=" math  -> ge
+         | math "<=" math  -> le
+         | math "==" math  -> eq
+         | math "!=" math  -> ne
+         | math
+
+?math    : math "+" term  -> add
+         | math "-" term  -> sub
+         | term
+
+?term    : term "*" atom   -> mul
+         | term "/" atom   -> div 
+         | atom
+
+?atom    : NUMBER 
+         | VAR
+         | STRING
+         | NIL
+         | BOOL
+         | "(" cmp ")"
+
+CLASS    : /[A-Z]\w*/
+VAR      : /[a-z_]\w*/
+NUMBER   : /([1-9][0-9]*|0)(\.[0-9]+)?/ 
+STRING   : /"[^"\n]*"/
+BOOL     : "true" | "false"
+NIL      : "nil"
+COMMENT  : "//" /[^\n]*/
+
+%ignore /\s/ | COMMENT
