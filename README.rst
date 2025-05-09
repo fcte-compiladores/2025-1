@@ -65,17 +65,9 @@ Habilite a funcionalidade "Watch" no repositório para receber notificações so
 
 Cada aluno também deve preencher o formulário com nome, e-mail e usuário no Github.
 
-Github:
-    https://github.com/fcte-compiladores/2025-1/
-
-Github Classroom:
-    https://classroom.github.com/classrooms/205002555-fcte-compiladores-2025-1/
-
-Microsoft Teams:
-    https://teams.microsoft.com/l/team/19%3AbGTbK7wdyAd3eklkDltjeVrxinaJIVd0WytFIaqsfwI1%40thread.tacv2/conversations?groupId=f5437d5a-21cd-4716-90cf-63503797a394&tenantId=ec359ba1-630b-4d2b-b833-c8e6d48f8059
-
-Formulário de inscrição:
-    https://docs.google.com/forms/d/12gy67ybJXSMaWfJ5ltfoFI0X4o8V9xGWXyoY89MhM6c/
+* [Github](https://github.com/fcte-compiladores/2025-1/)
+* [Github Classroom](https://classroom.github.com/a/8ynG-hQy)
+* [Formulário de inscrição](https://docs.google.com/forms/d/12gy67ybJXSMaWfJ5ltfoFI0X4o8V9xGWXyoY89MhM6c/)
 
 
 Critérios de avaliação
@@ -115,12 +107,10 @@ cedo o possível. O curso requer Python 3.6+ com alguns pacotes instalados:
 
 Já que vamos utilizar o Python, vale a pena instalar as seguintes ferramentas:
 
-* virtualenvwrapper: isola ambientes de desenvolvimento
-* flake8: busca erros de estilo e programação no seu código
-* black: formatador de código de acordo com o guia de estilo do Python
+* [uv](https://docs.astral.sh/uv/): isola ambientes de desenvolvimento
+* [ruff](https://docs.astral.sh/ruff/): busca erros de estilo e programação no seu código
 * pytest, pytest-cov: criação de testes unitários
 * hypothesis: auxilia na criação de testes unitários parametrizados.
-* Editores de código/IDE: Utilize o seu favorito. Recomendo o VSCode com plugins para Python.
   
 DICA: em todos os casos, prefira instalar os pacotes Python utilizando o apt-get
 ou o mecanismo que sua distribuição fornece e, somente se o pacote não existir, 
