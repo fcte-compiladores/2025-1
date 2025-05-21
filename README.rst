@@ -2,7 +2,7 @@
 Avisos!
 =======
 
-* Nenhum aviso!
+* Link para entrega da prova: Turma 16-18h: https://classroom.github.com/a/mxz0caNP
 
 
 ==============
