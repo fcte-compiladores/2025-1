@@ -10,4 +10,10 @@ fun printArg(arg) {
   print arg;
 }
 
+
+{
+  var returnArg = "outra coisa";
+
+  returnFunCallWithArg(printArg, "hello world");
+}
 returnFunCallWithArg(printArg, "hello world"); // expect: hello world

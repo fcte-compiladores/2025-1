@@ -1,15 +1,19 @@
 var a = read_number("a: ");
 var b = read_number("b: ");
 
-if (a > b) {
-    print "a maior que b";
-    var a = 3.14;
-    print a;
+fun maior(a, b) {
+    if (a > b) {
+        print "a maior que b";
+        var a = 3.14;
+        print a;
+    }
+    else if (a < b) {
+        print "a menor que b";
+    }
+    else {
+        print "a igual a b";
+    }
+    return a;
 }
-else if (a < b) {
-    print "a menor que b";
-}
-else {
-    print "a igual a b";
-}
-print a;
+
+print maior(a, b);
