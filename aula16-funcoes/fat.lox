@@ -1,0 +1,10 @@
+fun fat(n) {
+    if (n == 0) {
+        return 1;
+    } else {
+        return n * fat(n - 1);
+    }
+}
+
+var n = read_number("n: ");
+print fat(n);

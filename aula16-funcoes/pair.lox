@@ -1,0 +1,76 @@
+fun Pair(x, y) {
+    fun getter(i) {
+        if (i == 0) return x;
+        if (i == 1) return y;
+    }
+    return getter;
+}
+
+fun print_pair(p) {
+    print p(0);
+    print p(1);
+}
+
+fun add(v1, v2) {
+    return Pair(v1(0) + v2(0), v1(1) + v2(1));
+}
+
+fun mul(s, v) {
+    return Pair(v(0) * s, v(1) * s);
+}
+
+var u = Pair(1, 2);
+var v = Pair(3, 0 - 10);
+var w = add(mul(2, u), v);
+
+// print_pair(w);
+var cons = Pair;
+var lst = cons(1, cons(2, cons(3, nil)));
+
+fun head(lst) {
+    return lst(0);
+}
+
+fun tail(lst) {
+    return lst(1);
+}
+
+fun print_list(lst) {
+    if (lst == nil) return;
+
+    print head(lst);
+    print_list(tail(lst));
+}
+
+fun range_rev(n) {
+    if (n == 0) return cons(0, nil); 
+    return cons(n, range_rev(n - 1));
+}
+
+fun range(n) {
+    return reverse(range_rev(n - 1));
+}
+
+fun reverse(lst) {
+    fun aux(lst_, acc) {
+        if (lst_ == nil) return acc;
+        var x = head(lst_);
+        return aux(tail(lst_), cons(x, acc));
+    }
+    return aux(lst, nil);
+}
+
+fun map(f, lst) {
+    fun aux(lst_, acc) {
+        if (lst_ == nil) return acc;
+        var x = head(lst_);
+        return aux(tail(lst_), cons(f(x), acc));
+    }
+    return reverse(aux(lst, nil));
+}
+
+
+fun sqr(x) { return x * x;}
+
+print "";
+print_list(map(sqr, range(10)));
