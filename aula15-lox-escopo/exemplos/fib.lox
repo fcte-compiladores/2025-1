@@ -5,6 +5,15 @@ var y = 1;
 for (var i = 0; i < n; i = i + 1) {
     var aux = x;
     print x;
-    x = y;
+    { 
+        { 
+            var x = 10;
+            { 
+                x = 3.14;
+            }
+        }
+        x = y;
+    }
+    // x = y;
     y = aux + y;
 }

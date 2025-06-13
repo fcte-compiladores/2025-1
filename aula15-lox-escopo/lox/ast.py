@@ -266,6 +266,9 @@ class VarDef(Stmt):
     def eval(self, ctx: Ctx):
         key = self.name
         value = self.value.eval(ctx)
+        
+        # Importante: usamos ctx.var_def() ao invés de ctx[key] = value para
+        # garantir que a variável será criada no escopo atual
         ctx.var_def(key, value)
 
 
@@ -327,10 +330,16 @@ class Block(Stmt):
     stmts: list[Stmt]
 
     def eval(self, ctx: Ctx):
-        ctx = ctx.push({})
+        # Coloca um contexto vazio no topo do contexto de execução
+        new_ctx = ctx.push({})
+        
+        # Percorre a lista de comandos (stmts) e avalia cada um deles 
         for stmt in self.stmts:
-            stmt.eval(ctx)
-
+            stmt.eval(new_ctx)
+        
+        # Descartamos o contexto criado para o bloco
+        # mas isto é feito implicitamente pelo python 
+        # new_ctx.pop()  
 
 @dataclass
 class Function(Stmt):
@@ -345,7 +354,16 @@ class Function(Stmt):
     body: list[Stmt]
 
     def eval(self, ctx: Ctx):
-        func = LoxFun(self.arg_names, self.body, ctx)
+        def func(*arg_values: Value):
+            scope = dict(zip(self.arg_names, arg_values, strict=True))
+            local_ctx = Ctx(scope, ctx)
+
+            try:
+                for stmt in self.body:
+                    stmt.eval(local_ctx)
+            except LoxReturn as e:
+                return e.value
+
         ctx.var_def(self.name, func)
         return func
 
@@ -370,6 +388,9 @@ class LoxFun:
     ctx: Ctx
 
     def __call__(self, *arg_values: Value):
+        """
+        fun.__call__(a, b, c, ...) <==> fun(a, b, c, ...)
+        """
         scope = dict(zip(self.arg_names, arg_values, strict=True))
         ctx = Ctx(scope, self.ctx)
 
