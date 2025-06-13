@@ -1,0 +1,6 @@
+print "string"; // expect: string
+print 123; // expect: 123
+print 1.5; // expect: 1.5
+print true; // expect: true
+print false; // expect: false
+print nil; // expect: nil

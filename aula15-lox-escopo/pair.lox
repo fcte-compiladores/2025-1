@@ -1,0 +1,58 @@
+fun Pair(x, y) {
+    fun get(i) {
+        if (i == 0) {
+            return x;
+        } else {
+            return y;
+        }
+    }
+    return get;
+}
+
+fun add(u, v) {
+    fun get(i) {
+        return u(i) + v(i);
+    }
+    return get;
+}
+
+
+fun mul(s, v) {
+    fun get(i) {
+        return s * v(i);
+    }
+    return get;
+}
+
+
+var u = Pair(1, 2);
+var v = Pair(3, 4);
+var w = add(mul(2, u), v);
+
+var cons = Pair;
+var lst = cons(1, cons(2, cons(3, cons(4, nil))));
+
+fun print_lst(lst) {
+    var first = lst(0);
+    var second = lst(1);
+
+    print first;
+
+    if (second != nil) {
+        print_lst(second);
+    }
+}
+
+fun sum_list(lst) {
+    if (lst == nil) {
+        return 0;
+    }
+    
+    var first = lst(0);
+    var second = lst(1);
+    return first + sum_list(second);
+}
+
+
+print_lst(lst);
+print sum_list(lst);
