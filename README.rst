@@ -2,7 +2,7 @@
 Avisos!
 =======
 
-* Nenhum aviso!
+* Prova 2 - 16h: https://classroom.github.com/a/BRt_S8Ew
 
 
 ==============
