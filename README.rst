@@ -3,6 +3,7 @@ Avisos!
 =======
 
 * Prova 2 - 16h: https://classroom.github.com/a/BRt_S8Ew
+* Prova 2 -18h: https://classroom.github.com/a/PBVutFEA
 * Repo: https://github.com/fcte-compiladores/prova-2
 * Submeter exercícios: https://classroom.github.com/a/Tj5e5Zoa
 
