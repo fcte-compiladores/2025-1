@@ -1,0 +1,4 @@
+// var sqrt = 42;
+print sqrt(9);
+print clock();
+print max(1, 4, "o que o python vai fazer?", 3);

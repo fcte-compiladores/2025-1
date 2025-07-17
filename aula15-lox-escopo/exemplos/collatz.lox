@@ -1,0 +1,19 @@
+var n = read_number("n: ");
+var count = 0;
+
+// 10 -> 5 -> 16 -> 8 -> 4 -> 2 -> 1 -> 4 -> 2 -> 1 -> ...
+
+while (n != 1) {
+    print n;
+    count = count + 1;
+    
+    if (is_even(n)) {
+        n = n / 2;
+    } else {
+        n = 3 * n + 1;
+    }
+} 
+
+print n;
+print "iteracoes";
+print count + 1;

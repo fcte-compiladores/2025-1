@@ -1,0 +1,36 @@
+var GLOBAL_VAR = "foobar";
+
+class Foo < Bar {
+
+    fib(n) {
+        var x;
+        if (n > 2) {
+            x = 10;
+        } else {
+            x = 42;
+        }
+    }
+}
+
+fun fib(n) {
+    if (n < 2) return 0;
+    else if (n == 2) return 2;
+    else return 10;
+    
+    print fib(x = 2);
+
+    f(x = x().foo).bar.baz()(x = 2);
+    42.method();
+
+    x = 2 + !!!-!--!!!--- 2;
+
+    while (n > 2) while (false) while (n < 1) n = n + 1;
+}
+
+fun main() {
+    print fib(10);
+    return 42;
+}
+
+
+main();

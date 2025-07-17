@@ -1,0 +1,10 @@
+var n = read_number("n: ");
+var x = 1;
+var y = 1;
+
+for (var i = 0; i < n; i = i + 1) {
+    var aux = x;
+    print x;
+    x = y;
+    y = aux + y;
+}
