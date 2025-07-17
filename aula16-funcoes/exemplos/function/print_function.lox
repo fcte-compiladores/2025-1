@@ -1,0 +1,5 @@
+fun printAnswer() {
+    print "The answer is 42.";
+}
+
+printAnswer(); // expect: The answer is 42.

@@ -1,0 +1,10 @@
+fun hello(x, y) {  // {"x": 40, "y": 2}
+    print "hello world";
+    if (x > y) {
+        return;
+    }
+    print "bye!";
+    return 10;
+}
+
+var b = hello(40, 2);

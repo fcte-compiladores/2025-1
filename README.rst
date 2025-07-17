@@ -2,11 +2,6 @@
 Avisos!
 =======
 
-* Link para entrega da prova: Turma 16-18h: https://classroom.github.com/a/mxz0caNP
-* link2 https://classroom.github.com/a/rvOmLE7f
-
-
-
 ==============
 Compiladores 1
 ==============

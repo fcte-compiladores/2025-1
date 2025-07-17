@@ -1,0 +1,75 @@
+?start     : program
+
+program    : decl*
+
+?decl      : stmt
+           | var_def
+           | fun_def
+
+var_def    : "var" VAR "=" expr ";"
+fun_def    : "fun" VAR "(" fun_args ")" block
+fun_args   : [ VAR ("," VAR)* ]
+return_cmd : "return" expr? ";"
+
+
+?stmt      : expr ";"
+           | print_cmd
+           | if_cmd
+           | for_cmd
+           | while_cmd
+           | block
+           | return_cmd
+
+if_cmd     : "if" "(" expr ")" stmt [ "else" stmt ]
+while_cmd  : "while" "(" expr ")" stmt
+for_cmd    : "for" "(" for_args ")" stmt
+for_args   : (var_def | opt_expr ";") opt_expr ";" opt_expr
+opt_expr   : expr?
+
+print_cmd  : "print" expr ";"
+block      : "{" decl* "}"
+
+// EXPRESSÕES
+?expr      : assign
+
+?assign    : VAR "=" expr
+           | call "." VAR "=" expr  -> setattr
+           | test
+
+?test      : test "==" cmp  -> eq
+           | test "!=" cmp  -> ne
+           | cmp
+
+?cmp       : cmp ">" factor   -> gt
+           | cmp "<" factor   -> lt
+           | cmp ">=" factor  -> ge
+           | cmp "<=" factor  -> le
+           | factor
+
+?factor    : factor "+" term  -> add
+           | factor "-" term  -> sub
+           | term
+
+?term      : term "*" atom   -> mul
+           | term "/" atom   -> div 
+           | atom
+
+?atom      : NUMBER 
+           | BOOL
+           | VAR
+           | STRING
+           | NIL
+           | "(" cmp ")"
+           | call
+
+call       : VAR "(" params ")"
+params     : [ expr ("," expr )* ]
+
+BOOL.2     : "true" | "false"
+VAR.1      : /[a-z_A-Z]\w*/
+NUMBER     : /([1-9][0-9]*|0)(\.[0-9]+)?/ 
+STRING     : /"[^"]*"/
+NIL.2      : "nil"
+COMMENT    : "//" /[^\n]*/
+
+%ignore /\s/ | COMMENT

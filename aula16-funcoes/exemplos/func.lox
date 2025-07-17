@@ -1,0 +1,20 @@
+fun pair(x, y) {
+    fun getter(i) {
+        if (i == "x") {
+            return x;
+        } else if (i == "y") {
+            return y;
+        } else {
+            print "variavel invalida";
+            print i;
+            pair.error;
+        }
+    }
+    return getter;
+}
+
+
+var point = pair(2, 4);
+
+print point("x"); // out: 2
+print point("y"); // out: 4
