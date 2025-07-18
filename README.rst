@@ -3,7 +3,7 @@ Avisos!
 =======
 
 * Prova: https://github.com/fcte-compiladores/prova-3/
-* Entrega da Prova 3: https://classroom.github.com/a/XZpFRAD7 (turma 16h)
+* Entrega da Prova 3: https://classroom.github.com/a/4eZrRx1C (turma 18h)
 * Entrega da lista: https://classroom.github.com/a/ylDz2StW (até segunda)
 
 ==============
