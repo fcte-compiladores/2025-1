@@ -2,6 +2,8 @@
 Avisos!
 =======
 
+* Entrega da Prova 3: https://classroom.github.com/a/XZpFRAD7
+
 ==============
 Compiladores 1
 ==============
