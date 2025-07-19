@@ -2,7 +2,7 @@
 Avisos!
 =======
 
-* Entrega da Prova 3: https://classroom.github.com/a/1X29PbiZ (turma 18h)
+* Entrega do trabalho final: https://classroom.github.com/a/Hppw7Zh2 (até segunda)
 * Entrega da lista: https://classroom.github.com/a/ylDz2StW (até segunda)
 
 ==============
