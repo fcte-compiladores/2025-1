@@ -2,6 +2,7 @@
 Avisos!
 =======
 
+* Substitutiva: https://classroom.github.com/a/rUlbFiG0
 * A planilha de notas (sem a nota do trabalho final) se encontra em: https://github.com/fcte-compiladores/2025-1/blob/main/notas/notas.csv
 * A correção mais detalhada de cada atividade está na mesma pasta
 
