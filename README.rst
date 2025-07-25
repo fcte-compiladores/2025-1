@@ -2,8 +2,8 @@
 Avisos!
 =======
 
-* Entrega do trabalho final: https://classroom.github.com/a/Hppw7Zh2 (até segunda)
-* Entrega da lista: https://classroom.github.com/a/ylDz2StW (até segunda)
+* A planilha de notas (sem a nota do trabalho final) se encontra em: https://github.com/fcte-compiladores/2025-1/blob/main/notas/notas.csv
+* A correção mais detalhada de cada atividade está na mesma pasta
 
 ==============
 Compiladores 1
